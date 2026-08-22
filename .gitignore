@@ -1,0 +1,14 @@
+
+#python
+_pycache_/
+*.pyc
+.venv/
+venv/
+
+#secrets - Never commit these
+.env
+.env.local
+*.key
+
+# OS
+.DS_Store
