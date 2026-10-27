@@ -15,15 +15,24 @@ load_dotenv()
 # environment automatically.
 client = OpenAI()
 
+
+def ask(question: str) -> str:
+    """Send one question to the LLM and return the answer text."""
+    resp = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are concise."},
+            {"role": "user",   "content": question},
+        ],
+        temperature=0.3,
+    )
+    return resp.choices[0].message.content
+
+
 def main() -> None:
     # Use the question from the command line, or a default one.
     question = " ".join(sys.argv[1:]) or "What is RAG in one sentence?"
-
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": question}],
-    )
-    print(response.choices[0].message.content)
+    print(ask(question))
 
 
 if __name__ == "__main__":
