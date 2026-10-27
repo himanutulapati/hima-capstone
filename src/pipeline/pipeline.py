@@ -24,7 +24,7 @@ import logging
 import time
 
 # Live-session stand-in. Same Pydantic shape as the real call.
-from fake_llm import Question, Answer, fake_ask_llm, FakeLLMError
+from .fake_llm import Question, Answer, fake_ask_llm, FakeLLMError
 
 
 # ---------- Step 2: one async call ----------

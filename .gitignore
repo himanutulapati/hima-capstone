@@ -12,3 +12,6 @@ venv/
 
 # OS
 .DS_Store
+
+# Pipeline logs
+logs/*.log
