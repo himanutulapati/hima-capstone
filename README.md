@@ -5,7 +5,7 @@ completed as part of
 the *Agentic AI & RAG Engineering* programme.
 ## Corpus
 
-<one-sentence description from Step 1a — what corpus, source>
+Indian stock market documents: SEBI investor-education material, NSE/BSE market rules, and annual reports and quarterly results for a small set of NIFTY 50 companies (sources: sebi.gov.in, nseindia.com, bseindia.com, company investor-relations pages).
 
 ## Structure
 
@@ -18,4 +18,4 @@ choice)
 
 - [x] Set up repo + secrets discipline
 - [x] Build `hello_llm.py` (Lab Step 2)
-- [ ] Write ADR v1 (Lab Step 3)
+- [x] Write ADR v1 (Lab Step 3)

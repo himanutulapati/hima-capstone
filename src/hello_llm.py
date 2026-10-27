@@ -28,12 +28,6 @@ def ask(question: str) -> str:
     )
     return resp.choices[0].message.content
 
-
-def main() -> None:
-    # Use the question from the command line, or a default one.
-    question = " ".join(sys.argv[1:]) or "What is RAG in one sentence?"
-    print(ask(question))
-
-
 if __name__ == "__main__":
-    main()
+    q = " ".join(sys.argv[1:]) or "Say hello in one sentence."
+    print(ask(q))
